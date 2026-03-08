@@ -6,5 +6,18 @@
     <title>Weather App</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <form>
+      <label for="user-input"
+        >Look up the current temperature in your desired location!
+      </label>
+      <input type="text" id="user-input" name="user-input" />
+      <input type="radio" name="temperature" id="celsius" checked="checked"/>
+      <label for="celsius">Celsius</label>
+      <input type="radio" name="temperature" id="fahrenheit" />
+      <label for="fahrenheit">Fahrenheit</label>
+      <button id="search-button">Search</button>
+    </form>
+    <div id="display-container"></div>
+  </body>
 </html>
