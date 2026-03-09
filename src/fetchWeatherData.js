@@ -8,6 +8,7 @@ export const fetchWeatherData = async () => {
       `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${userInput}?key=46EBDKGCUJ5N6A5JAGJPXYYR9`,
     );
     const weatherData = await response.json();
+    console.log(weatherData);
     let temperature = weatherData.currentConditions.temp;
     const conditions = weatherData.currentConditions.conditions;
     const date = weatherData.days[0].datetime;
@@ -17,6 +18,8 @@ export const fetchWeatherData = async () => {
     });
     let actualDay = formatter.format(new Date(date));
     let feelsLike = weatherData.currentConditions.feelslike;
+    let weatherDescription = weatherData.description;
+    const iconID = weatherData.currentConditions.icon;
     const timeZone = weatherData.timezone;
     if (celsius && !fahrenheit) {
       feelsLike = Math.round(((feelsLike - 32) * 5) / 9);
@@ -31,8 +34,10 @@ export const fetchWeatherData = async () => {
       Temperature: temperatureValue,
       Conditions: conditions,
       Date: actualDay,
+      Description: weatherDescription,
       FeelsLike: feelsLikeValue,
       Timezone: timeZone,
+      Icon: iconID,
     };
   } catch (error) {
     console.log(error);

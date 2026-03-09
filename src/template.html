@@ -12,12 +12,15 @@
         >Look up the current temperature in your desired location!
       </label>
       <input type="text" id="user-input" name="user-input" />
-      <input type="radio" name="temperature" id="celsius" checked="checked"/>
+      <input type="radio" name="temperature" id="celsius" checked="checked" />
       <label for="celsius">Celsius</label>
       <input type="radio" name="temperature" id="fahrenheit" />
       <label for="fahrenheit">Fahrenheit</label>
       <button id="search-button">Search</button>
     </form>
-    <div id="display-container"></div>
+    <div id="loading-display"></div>
+    <div id="display-container">
+      <div id="temperature-and-icon"></div>
+    </div>
   </body>
 </html>

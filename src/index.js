@@ -4,17 +4,27 @@ import { renderWeatherData } from "./renderWeatherData.js";
 
 const searchButton = document.getElementById("search-button");
 
+hideLoader();
+
 searchButton.addEventListener("click", async (e) => {
+  showLoader();
   e.preventDefault();
-  const displayContainer = document.getElementById("display-container");
-  displayContainer.innerHTML="";
-  const loadingDisplay = document.createElement("div");
-  loadingDisplay.id="loading-display";
-  loadingDisplay.textContent = "Fetching data....";
-  displayContainer.appendChild(loadingDisplay);
   fetchWeatherData().then((data) => {
-    loadingDisplay.remove();
-    console.log(data);
-    renderWeatherData(data);
+    try {
+      console.log(data);
+      renderWeatherData(data);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      hideLoader();
+    }
   });
 });
+
+function showLoader() {
+  document.getElementById("loading-display").style.display = "block";
+}
+
+function hideLoader() {
+  document.getElementById("loading-display").style.display = "none";
+}
