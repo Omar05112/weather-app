@@ -1,11 +1,4 @@
-#temperature-display {
-  color: brown;
-  font-size: 90px;
-}
 
-
-
-/* HTML: <div class="loader"></div> */
 #loading-display{
 
   width: 50px;
@@ -24,12 +17,16 @@
 @keyframes l4 {to{transform: rotate(1turn)}}
 
 
+#display-container{
+  font-size: 30px;
+}
+
 
 #weather-icon {
   height: 70px;
   width: 70px;
 }
 
-#temperature-and-icon {
+#first-two{
   display: flex;
 }

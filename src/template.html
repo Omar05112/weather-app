@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <form>
+    <form id="weather-form">
       <label for="user-input"
         >Look up the current temperature in your desired location!
       </label>
@@ -19,8 +19,13 @@
       <button id="search-button">Search</button>
     </form>
     <div id="loading-display"></div>
+    <div id="error-message"></div>
     <div id="display-container">
-      <div id="temperature-and-icon"></div>
+      <div id="first-two">
+        <div id="temperature-and-icon-and-feels-like"></div>
+        <div id="conditions-and-date-and-timezone"></div>
+      </div>
+      <div id="description-container"></div>
     </div>
   </body>
 </html>

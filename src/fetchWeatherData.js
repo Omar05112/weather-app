@@ -7,6 +7,7 @@ export const fetchWeatherData = async () => {
     const response = await fetch(
       `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${userInput}?key=46EBDKGCUJ5N6A5JAGJPXYYR9`,
     );
+    
     const weatherData = await response.json();
     console.log(weatherData);
     let temperature = weatherData.currentConditions.temp;
