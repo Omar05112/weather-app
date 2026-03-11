@@ -8,24 +8,31 @@
   </head>
   <body>
     <form id="weather-form">
-      <label for="user-input"
-        >Look up the current temperature in your desired location!
-      </label>
-      <input type="text" id="user-input" name="user-input" />
-      <input type="radio" name="temperature" id="celsius" checked="checked" />
-      <label for="celsius">Celsius</label>
-      <input type="radio" name="temperature" id="fahrenheit" />
-      <label for="fahrenheit">Fahrenheit</label>
+      <div id="labelandtext">
+        <label for="user-input" id="dothething"
+          >This is just a weather app, you know what to do lol
+        </label>
+        <input type="text" id="user-input" name="user-input" />
+      </div>
+      <div id="bothradios">
+        <div id="celsiusside">
+          <input
+            type="radio"
+            name="temperature"
+            id="celsius"
+            checked="checked"
+          />
+          <label for="celsius">°C</label>
+        </div>
+        <div id="fahside">
+          <input type="radio" name="temperature" id="fahrenheit" />
+          <label for="fahrenheit">°F</label>
+        </div>
+      </div>
       <button id="search-button">Search</button>
     </form>
     <div id="loading-display"></div>
     <div id="error-message"></div>
-    <div id="display-container">
-      <div id="first-two">
-        <div id="temperature-and-icon-and-feels-like"></div>
-        <div id="conditions-and-date-and-timezone"></div>
-      </div>
-      <div id="description-container"></div>
-    </div>
+    <div id="display-container"></div>
   </body>
 </html>
