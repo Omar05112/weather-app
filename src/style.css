@@ -1,13 +1,26 @@
+@font-face {
+  font-family: "Norse Bold";
+  src: url("ShareTechMono-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  font-family: "Norse Bold";
+}
 body {
   display: flex;
-  margin-top: 130px;
+  margin-top: 170px;
   padding: 0;
-  background-color: #000;
+  background: black;
+  background-image: radial-gradient(rgb(39, 39, 39) 1px, transparent 0);
+  background-size: 3px 30px;
+
   color: white;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 20px;
 }
 
 #loading-display {
@@ -95,7 +108,7 @@ body {
 #bothradios {
   display: flex;
   font-size: 30px;
-  gap: 10px;
+  gap: 20px;
   align-items: center;
   justify-content: center;
 }
@@ -109,9 +122,13 @@ body {
 #search-button {
   cursor: pointer;
   height: 50px;
-  width: 140px;
+  width: 170px;
   font-size: 21px;
   border-radius: 20px;
+}
+
+#search-button:hover {
+  background-color: #fff;
 }
 
 #dothething {
@@ -121,6 +138,8 @@ body {
 #user-input {
   width: 900px;
   padding: 7px;
+  font-size: 18px;
+  outline: 0;
 }
 
 #weather-form {
@@ -128,6 +147,7 @@ body {
   flex-direction: column;
   gap: 12px;
   align-items: center;
+  justify-content: center;
 }
 
 #display-container {
@@ -140,4 +160,8 @@ input[type="radio"] {
   width: 2em;
   height: 2rem;
   accent-color: green;
+}
+
+#error-message {
+  font-size: 20px;
 }
