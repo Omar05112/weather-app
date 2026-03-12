@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="609a232ab53e413e38d2.css" />
+  <script defer src="main.js"></script></head>
+  <body>
+    <form id="weather-form">
+      <div id="labelandtext">
+        <label for="user-input" id="dothething"
+          >This is a weather app.
+        </label>
+        <input type="text" id="user-input" name="user-input" placeholder="Enter your location."/>
+      </div>
+      <div id="bothradios">
+        <div id="celsiusside">
+          <input
+            type="radio"
+            name="temperature"
+            id="celsius"
+            checked="checked"
+          />
+          <label for="celsius">°C</label>
+        </div>
+        <div id="fahside">
+          <input type="radio" name="temperature" id="fahrenheit" />
+          <label for="fahrenheit">°F</label>
+        </div>
+      </div>
+      <button id="search-button">Search</button>
+    </form>
+    <div id="loading-display"></div>
+    <div id="error-message"></div>
+    <div id="display-container"></div>
+  </body>
+</html>
